@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediccion</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body>
+        <h1>Prediccion</h1>
+        <div class="container">
+            <form action="/predict" method="post">
+                <label for="Sexo">Sexo:</label>
+                <select name="sexo" id="Sexo">
+                    <option value="0">Masculino</option>
+                    <option value="1">Femino</option>
+                </select>
+                <br>
+                <label for="Cod_Prog">Codigo programa:</label>
+                <input type="number" name="cod_prog" id="Cod_Prog">
+                <br>
+                <label for="dpto_nace">Departamento de nacimiento:</label>
+                <input type="number" name="dpto_nace" id="Dpto_Nace">
+                <br>
+                <label for="mpio_nace">Municipio de nacimiento:</label>
+                <input type="number" name="mpio_nace" id="mpio_nace">
+                <br>
+                <label for="estrato">Estrato:</label>
+                <input type="number" name="estrato" id="Estrato">
+                <br>
+                <label for="mod_ingreso">Modo Ingreso:</label>
+                <input type="number" name="mod_ingreso" id="mod_ingreso">
+                <br>
+                <label for="t_colegio">Tipo de Colegio:</label>
+                <select name="t_colegio" id="t_colegio">
+                    <option value="1">Oficial</option>
+                    <option value="2">No oficial</option>
+                </select>
+                <br>
+                <label for="ult_prog">Ultimo programa:</label>
+                <input type="number" id="ult_prog" name="ult_prog">
+                <br>
+                <label for="p_ingreso">Perido de Ingreso:</label>
+                <select name="p_ingreso" id="p_ingreso">
+                    <option value="0">Semestre 1</option>
+                    <option value="1">Semestre 2</option>
+                </select>
+                <br>
+                <label for="edad_categoria">Categoria de edad:</label>
+                <select name="edad_categoria" id="edad_categoria">
+                    <option value="0">menores de 18</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>

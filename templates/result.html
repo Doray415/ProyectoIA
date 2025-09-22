@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resultado</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Prediccion</h1>
+            <div class="result">
+                <h2>Resultado</h2>
+            <p> {{ pred | safe }}</p>
+            </div>
+            <a href="/" class="button">Realizar otra predicción</a>
+        </div>
+    </body>
+</html>
